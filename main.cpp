@@ -3,6 +3,7 @@
 int getInput(std::string& name);
 void setRows(std::string rows[3], std::string name);
 void printGreeting(std::string rows[3]);
+bool isMale(std::string name);
 
 int main()
 {
@@ -29,7 +30,12 @@ int getInput(std::string& name)
 
 void setRows(std::string rows[3], std::string name)
 {
-    rows[2] = "* Sveikas, " + name + "! *";
+    if (isMale(name)) {
+        rows[2] = "* Sveikas, " + name + "! *";
+    }
+    else {
+        rows[2] = "* Sveika, " + name + "! *";
+    }
 
     rows[0] = "*";
     rows[1] = "*";
@@ -48,4 +54,12 @@ void printGreeting(std::string rows[3])
               << rows[2] << std::endl
               << rows[1] << std::endl
               << rows[0] << std::endl;
+}
+
+bool isMale(std::string name)
+{
+    if (name[name.length()-1] == 's' || name[name.length()-1] == 'S') {
+        return true;
+    }
+    return false;
 }
