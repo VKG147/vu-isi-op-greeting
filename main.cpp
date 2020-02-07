@@ -2,6 +2,7 @@
 
 void getInput(std::string& name);
 void setRows(std::string rows[3], std::string name);
+void printGreeting(std::string rows[3]);
 
 int main()
 {
@@ -11,6 +12,8 @@ int main()
     getInput(name);
 
     setRows(rows, name);
+
+    printGreeting(rows);
 
     return 0;
 }
@@ -32,4 +35,13 @@ void setRows(std::string rows[3], std::string name)
     }
     rows[0] += "*";
     rows[1] += "*";
+}
+
+void printGreeting(std::string rows[3])
+{
+    std::cout << rows[0] << std::endl
+              << rows[1] << std::endl
+              << rows[2] << std::endl
+              << rows[1] << std::endl
+              << rows[0] << std::endl;
 }
