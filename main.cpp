@@ -1,6 +1,6 @@
 #include <iostream>
 
-void getInput(std::string& name);
+int getInput(std::string& name);
 void setRows(std::string rows[3], std::string name);
 void printGreeting(std::string rows[3]);
 
@@ -9,6 +9,7 @@ int main()
     std::string name;
     std::string rows[3];
 
+    std::cout << "Please enter your name: ";
     getInput(name);
 
     setRows(rows, name);
@@ -18,9 +19,12 @@ int main()
     return 0;
 }
 
-void getInput(std::string& name)
+int getInput(std::string& name)
 {
-    std::cin >> name;
+    if (std::cin >> name) {
+        return 1;
+    }
+    return 0;
 }
 
 void setRows(std::string rows[3], std::string name)
