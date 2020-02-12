@@ -6,7 +6,7 @@ The programme takes the name and row count as inputs and prints out a frame cont
 # Releases
 * [v0.1](https://github.com/VKG147/vu-isi-op-greeting/releases/tag/v0.1)
 * [v0.2](https://github.com/VKG147/vu-isi-op-greeting/releases/tag/v0.2)
-* v1.0 (current)
+* [v1.0](https://github.com/VKG147/vu-isi-op-greeting/releases/tag/v1.0) (latest)
 
 # Installation
 Clone the repository, compile main.cpp with your prefered C++ compiler and you're good to go!
