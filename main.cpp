@@ -2,20 +2,17 @@
 
 int getInput(std::string& name);
 void setRows(std::string rows[3], std::string name);
-void printGreeting(std::string rows[3]);
+void printGreeting(std::string name);
 bool isMale(std::string name);
 
 int main()
 {
     std::string name;
-    std::string rows[3];
 
     std::cout << "Please enter your name: ";
     getInput(name);
 
-    setRows(rows, name);
-
-    printGreeting(rows);
+    printGreeting(name);
 
     return 0;
 }
@@ -47,8 +44,11 @@ void setRows(std::string rows[3], std::string name)
     rows[1] += "*";
 }
 
-void printGreeting(std::string rows[3])
+void printGreeting(std::string name)
 {
+    std::string rows[3];
+    setRows(rows, name);
+
     std::cout << rows[0] << std::endl
               << rows[1] << std::endl
               << rows[2] << std::endl
