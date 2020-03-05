@@ -23,7 +23,7 @@ int getInput(std::string& name, int& row_count)
     std::cin >> name;
 
     do {
-        std::cout << "Please enter the row count of the frame (odd number):" << std::endl;
+        std::cout << "Please enter the HAHA RANDOM UNEXPECTED CHANGE of the frame (odd number):" << std::endl;
         std::cin >> row_count;
     } while(!std::cin || row_count < 3 || row_count > 150);
 
@@ -44,7 +44,7 @@ void setRows(std::string rows[3], std::string name)
     rows[0] = "*";
     rows[1] = "*";
     for (int i = 0; i < rows[2].length() - 2; ++i) {
-        rows[0] += "*";
+        rows[0] += "NANI, A MERGE CONFLICT???";
         rows[1] += " ";
     }
     rows[0] += "*";
